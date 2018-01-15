@@ -22,7 +22,7 @@ use PhpOffice\PhpPresentation\ComparableInterface;
 use PhpOffice\PhpPresentation\GeometryCalculator;
 use PhpOffice\PhpPresentation\ShapeContainerInterface;
 use PhpOffice\PhpPresentation\Slide;
-use PhpOffice\PhpPresentation\Shape\RichText;
+use PhpOffice\PhpPresentation\SlideShape\RichText;
 
 /**
  * Note class
@@ -128,7 +128,7 @@ class Note implements ComparableInterface, ShapeContainerInterface
     /**
      * Create rich text shape
      *
-     * @return \PhpOffice\PhpPresentation\Shape\RichText
+     * @return \PhpOffice\PhpPresentation\SlideShape\RichText
      */
     public function createRichTextShape()
     {
@@ -159,7 +159,7 @@ class Note implements ComparableInterface, ShapeContainerInterface
         $this->parent = $parent;
         return $this;
     }
-    
+
 
     /**
      * Get X Offset
@@ -175,7 +175,7 @@ class Note implements ComparableInterface, ShapeContainerInterface
         }
         return $this->offsetX;
     }
-    
+
     /**
      * Get Y Offset
      *
@@ -190,7 +190,7 @@ class Note implements ComparableInterface, ShapeContainerInterface
         }
         return $this->offsetY;
     }
-    
+
     /**
      * Get X Extent
      *
@@ -205,7 +205,7 @@ class Note implements ComparableInterface, ShapeContainerInterface
         }
         return $this->extentX;
     }
-    
+
     /**
      * Get Y Extent
      *

@@ -3,7 +3,7 @@
 namespace PhpOffice\PhpPresentation\Writer\ODPresentation;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
-use PhpOffice\PhpPresentation\Shape\Drawing;
+use PhpOffice\PhpPresentation\SlideShape\Drawing;
 use PhpOffice\PhpPresentation\Slide\Background\Image;
 
 class Pictures extends AbstractDecoratorWriter
@@ -31,7 +31,7 @@ class Pictures extends AbstractDecoratorWriter
                 $this->getZip()->addFromString('Pictures/'.$oBkgImage->getIndexedFilename($keySlide), file_get_contents($oBkgImage->getPath()));
             }
         }
-        
+
         return $this->getZip();
     }
 }

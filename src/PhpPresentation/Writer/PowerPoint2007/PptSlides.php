@@ -4,15 +4,15 @@ namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
 
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Shape\Chart as ShapeChart;
-use PhpOffice\PhpPresentation\Shape\Comment;
-use PhpOffice\PhpPresentation\Shape\Drawing as ShapeDrawing;
-use PhpOffice\PhpPresentation\Shape\Group;
-use PhpOffice\PhpPresentation\Shape\Media;
-use PhpOffice\PhpPresentation\Shape\RichText;
-use PhpOffice\PhpPresentation\Shape\RichText\Run;
-use PhpOffice\PhpPresentation\Shape\RichText\TextElement;
-use PhpOffice\PhpPresentation\Shape\Table as ShapeTable;
+use PhpOffice\PhpPresentation\SlideShape\Chart as ShapeChart;
+use PhpOffice\PhpPresentation\SlideShape\Comment;
+use PhpOffice\PhpPresentation\SlideShape\Drawing as ShapeDrawing;
+use PhpOffice\PhpPresentation\SlideShape\Group;
+use PhpOffice\PhpPresentation\SlideShape\Media;
+use PhpOffice\PhpPresentation\SlideShape\RichText;
+use PhpOffice\PhpPresentation\SlideShape\RichText\Run;
+use PhpOffice\PhpPresentation\SlideShape\RichText\TextElement;
+use PhpOffice\PhpPresentation\SlideShape\Table as ShapeTable;
 use PhpOffice\PhpPresentation\Slide;
 use PhpOffice\PhpPresentation\Slide\Background\Image;
 use PhpOffice\PhpPresentation\Slide\Note;
@@ -750,7 +750,7 @@ class PptSlides extends AbstractSlide
      * Write pic
      *
      * @param  \PhpOffice\Common\XMLWriter  $objWriter XML Writer
-     * @param  \PhpOffice\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter $shape
+     * @param  \PhpOffice\PhpPresentation\SlideShape\Drawing\AbstractDrawingAdapter $shape
      * @param  int $shapeId
      * @throws \Exception
      */

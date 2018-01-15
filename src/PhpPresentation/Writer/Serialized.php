@@ -20,7 +20,7 @@ namespace PhpOffice\PhpPresentation\Writer;
 use PhpOffice\Common\Adapter\Zip\ZipArchiveAdapter;
 use PhpOffice\Common\XMLWriter;
 use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
+use PhpOffice\PhpPresentation\SlideShape\Drawing\AbstractDrawingAdapter;
 
 /**
  * \PhpOffice\PhpPresentation\Writer\Serialized

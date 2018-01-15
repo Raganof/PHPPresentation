@@ -18,7 +18,7 @@
 namespace PhpOffice\PhpPresentation\Reader;
 
 use PhpOffice\Common\File;
-use PhpOffice\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
+use PhpOffice\PhpPresentation\SlideShape\Drawing\AbstractDrawingAdapter;
 
 /**
  * Serialized format reader
