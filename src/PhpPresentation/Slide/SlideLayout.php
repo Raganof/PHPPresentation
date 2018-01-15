@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * This file is part of PHPPresentation - A pure PHP library for reading and writing
@@ -17,7 +19,7 @@
 namespace PhpOffice\PhpPresentation\Slide;
 
 use PhpOffice\PhpPresentation\ComparableInterface;
-use PhpOffice\PhpPresentation\ShapeContainerInterface;
+use PhpOffice\PhpPresentation\SlideShapeContainerInterface;
 use PhpOffice\PhpPresentation\Style\ColorMap;
 
 class SlideLayout extends AbstractSlide implements ComparableInterface, ShapeContainerInterface

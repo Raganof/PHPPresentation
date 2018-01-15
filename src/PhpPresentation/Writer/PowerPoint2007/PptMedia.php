@@ -2,7 +2,7 @@
 
 namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
 
-use PhpOffice\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
+use PhpOffice\PhpPresentation\SlideShape\Drawing\AbstractDrawingAdapter;
 
 class PptMedia extends AbstractDecoratorWriter
 {

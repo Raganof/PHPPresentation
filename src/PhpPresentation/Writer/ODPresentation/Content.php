@@ -6,19 +6,19 @@ use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\Text;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Shape\Comment;
-use PhpOffice\PhpPresentation\Shape\Media;
+use PhpOffice\PhpPresentation\SlideShape\Comment;
+use PhpOffice\PhpPresentation\SlideShape\Media;
 use PhpOffice\PhpPresentation\Slide;
-use PhpOffice\PhpPresentation\Shape\Chart;
-use PhpOffice\PhpPresentation\Shape\Drawing as ShapeDrawing;
-use PhpOffice\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
-use PhpOffice\PhpPresentation\Shape\Group;
-use PhpOffice\PhpPresentation\Shape\Line;
-use PhpOffice\PhpPresentation\Shape\RichText\BreakElement;
-use PhpOffice\PhpPresentation\Shape\RichText\Run;
-use PhpOffice\PhpPresentation\Shape\RichText\TextElement;
-use PhpOffice\PhpPresentation\Shape\RichText;
-use PhpOffice\PhpPresentation\Shape\Table;
+use PhpOffice\PhpPresentation\SlideShape\Chart;
+use PhpOffice\PhpPresentation\SlideShape\Drawing as ShapeDrawing;
+use PhpOffice\PhpPresentation\SlideShape\Drawing\AbstractDrawingAdapter;
+use PhpOffice\PhpPresentation\SlideShape\Group;
+use PhpOffice\PhpPresentation\SlideShape\Line;
+use PhpOffice\PhpPresentation\SlideShape\RichText\BreakElement;
+use PhpOffice\PhpPresentation\SlideShape\RichText\Run;
+use PhpOffice\PhpPresentation\SlideShape\RichText\TextElement;
+use PhpOffice\PhpPresentation\SlideShape\RichText;
+use PhpOffice\PhpPresentation\SlideShape\Table;
 use PhpOffice\PhpPresentation\Slide\Note;
 use PhpOffice\PhpPresentation\Slide\Transition;
 use PhpOffice\PhpPresentation\Style\Alignment;
@@ -322,7 +322,7 @@ class Content extends AbstractDecoratorWriter
      * Write picture
      *
      * @param \PhpOffice\Common\XMLWriter $objWriter
-     * @param \PhpOffice\PhpPresentation\Shape\Media $shape
+     * @param \PhpOffice\PhpPresentation\SlideShape\Media $shape
      */
     public function writeShapeMedia(XMLWriter $objWriter, Media $shape)
     {
@@ -370,7 +370,7 @@ class Content extends AbstractDecoratorWriter
      * Write picture
      *
      * @param \PhpOffice\Common\XMLWriter $objWriter
-     * @param \PhpOffice\PhpPresentation\Shape\AbstractDrawingAdapter $shape
+     * @param \PhpOffice\PhpPresentation\SlideShape\AbstractDrawingAdapter $shape
      */
     public function writeShapeDrawing(XMLWriter $objWriter, ShapeDrawing\AbstractDrawingAdapter $shape)
     {
@@ -417,7 +417,7 @@ class Content extends AbstractDecoratorWriter
      * Write text
      *
      * @param \PhpOffice\Common\XMLWriter $objWriter
-     * @param \PhpOffice\PhpPresentation\Shape\RichText $shape
+     * @param \PhpOffice\PhpPresentation\SlideShape\RichText $shape
      */
     public function writeShapeTxt(XMLWriter $objWriter, RichText $shape)
     {
@@ -799,7 +799,7 @@ class Content extends AbstractDecoratorWriter
      * Write the default style information for a RichText shape
      *
      * @param \PhpOffice\Common\XMLWriter $objWriter
-     * @param \PhpOffice\PhpPresentation\Shape\RichText $shape
+     * @param \PhpOffice\PhpPresentation\SlideShape\RichText $shape
      */
     public function writeTxtStyle(XMLWriter $objWriter, RichText $shape)
     {

@@ -17,8 +17,8 @@
 
 namespace PhpOffice\PhpPresentation;
 
-use PhpOffice\PhpPresentation\Shape\Hyperlink;
-use PhpOffice\PhpPresentation\Shape\Placeholder;
+use PhpOffice\PhpPresentation\SlideShape\Hyperlink;
+use PhpOffice\PhpPresentation\SlideShape\Placeholder;
 use PhpOffice\PhpPresentation\Style\Fill;
 use PhpOffice\PhpPresentation\Style\Shadow;
 
@@ -30,7 +30,7 @@ abstract class AbstractShape implements ComparableInterface
     /**
      * Container
      *
-     * @var \PhpOffice\PhpPresentation\ShapeContainerInterface
+     * @var \PhpOffice\PhpPresentation\SlideShapeContainerInterface
      */
     protected $container;
 
@@ -93,13 +93,13 @@ abstract class AbstractShape implements ComparableInterface
     /**
      * Hyperlink
      *
-     * @var \PhpOffice\PhpPresentation\Shape\Hyperlink
+     * @var \PhpOffice\PhpPresentation\SlideShape\Hyperlink
      */
     protected $hyperlink;
 
     /**
      * PlaceHolder
-     * @var \PhpOffice\PhpPresentation\Shape\Placeholder
+     * @var \PhpOffice\PhpPresentation\SlideShape\Placeholder
      */
     protected $placeholder;
 
@@ -153,7 +153,7 @@ abstract class AbstractShape implements ComparableInterface
     /**
      * Set Container, Slide or Group
      *
-     * @param  \PhpOffice\PhpPresentation\ShapeContainerInterface $pValue
+     * @param  \PhpOffice\PhpPresentation\SlideShapeContainerInterface $pValue
      * @param  bool $pOverrideOld If a Slide has already been assigned, overwrite it and remove image from old Slide?
      * @throws \Exception
      * @return self
@@ -161,14 +161,14 @@ abstract class AbstractShape implements ComparableInterface
     public function setContainer(ShapeContainerInterface $pValue = null, $pOverrideOld = false)
     {
         if (is_null($this->container)) {
-            // Add drawing to \PhpOffice\PhpPresentation\ShapeContainerInterface
+            // Add drawing to \PhpOffice\PhpPresentation\SlideShapeContainerInterface
             $this->container = $pValue;
             if (!is_null($this->container)) {
                 $this->container->getShapeCollection()->append($this);
             }
         } else {
             if ($pOverrideOld) {
-                // Remove drawing from old \PhpOffice\PhpPresentation\ShapeContainerInterface
+                // Remove drawing from old \PhpOffice\PhpPresentation\SlideShapeContainerInterface
                 $iterator = $this->container->getShapeCollection()->getIterator();
 
                 while ($iterator->valid()) {
@@ -183,7 +183,7 @@ abstract class AbstractShape implements ComparableInterface
                 // Set new \PhpOffice\PhpPresentation\Slide
                 $this->setContainer($pValue);
             } else {
-                throw new \Exception("A \PhpOffice\PhpPresentation\ShapeContainerInterface has already been assigned. Shapes can only exist on one \PhpOffice\PhpPresentation\ShapeContainerInterface.");
+                throw new \Exception("A \PhpOffice\PhpPresentation\SlideShapeContainerInterface has already been assigned. Shapes can only exist on one \PhpOffice\PhpPresentation\SlideShapeContainerInterface.");
             }
         }
 
@@ -384,7 +384,7 @@ abstract class AbstractShape implements ComparableInterface
     /**
      * Get Hyperlink
      *
-     * @return \PhpOffice\PhpPresentation\Shape\Hyperlink
+     * @return \PhpOffice\PhpPresentation\SlideShape\Hyperlink
      */
     public function getHyperlink()
     {
@@ -397,7 +397,7 @@ abstract class AbstractShape implements ComparableInterface
     /**
      * Set Hyperlink
      *
-     * @param  \PhpOffice\PhpPresentation\Shape\Hyperlink $pHyperlink
+     * @param  \PhpOffice\PhpPresentation\SlideShape\Hyperlink $pHyperlink
      * @throws \Exception
      * @return self
      */
@@ -457,7 +457,7 @@ abstract class AbstractShape implements ComparableInterface
     }
 
     /**
-     * @param \PhpOffice\PhpPresentation\Shape\Placeholder $placeholder
+     * @param \PhpOffice\PhpPresentation\SlideShape\Placeholder $placeholder
      * @return $this
      */
     public function setPlaceHolder(Placeholder $placeholder)

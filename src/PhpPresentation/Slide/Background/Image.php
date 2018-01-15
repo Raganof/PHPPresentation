@@ -44,7 +44,7 @@ class Image extends AbstractBackground
      * @param  string                      $pValue      File path
      * @param  boolean                     $pVerifyFile Verify file
      * @throws \Exception
-     * @return \PhpOffice\PhpPresentation\Shape\Drawing
+     * @return \PhpOffice\PhpPresentation\SlideShape\Drawing
      */
     public function setPath($pValue = '', $pVerifyFile = true)
     {

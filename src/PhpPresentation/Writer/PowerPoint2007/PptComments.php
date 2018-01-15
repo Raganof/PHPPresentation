@@ -5,7 +5,7 @@ namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Shape\Comment;
+use PhpOffice\PhpPresentation\SlideShape\Comment;
 use PhpOffice\PhpPresentation\Slide;
 
 class PptComments extends AbstractDecoratorWriter

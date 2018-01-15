@@ -1,3 +1,6 @@
+
+
+
 <?php
 /**
  * This file is part of PHPPresentation - A pure PHP library for reading and writing
@@ -28,7 +31,7 @@ class GeometryCalculator
     /**
     * Calculate X and Y offsets for a set of shapes within a container such as a slide or group.
     *
-    * @param  \PhpOffice\PhpPresentation\ShapeContainerInterface $container
+    * @param  \PhpOffice\PhpPresentation\SlideShapeContainerInterface $container
     * @return array
     */
     public static function calculateOffsets(ShapeContainerInterface $container)
@@ -61,7 +64,7 @@ class GeometryCalculator
     /**
     * Calculate X and Y extents for a set of shapes within a container such as a slide or group.
     *
-    * @param  \PhpOffice\PhpPresentation\ShapeContainerInterface $container
+    * @param  \PhpOffice\PhpPresentation\SlideShapeContainerInterface $container
     * @return array
     */
     public static function calculateExtents(ShapeContainerInterface $container)

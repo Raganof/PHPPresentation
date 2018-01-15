@@ -2,7 +2,7 @@
 
 namespace PhpOffice\PhpPresentation\Writer\ODPresentation;
 
-use PhpOffice\PhpPresentation\Shape\Chart;
+use PhpOffice\PhpPresentation\SlideShape\Chart;
 
 abstract class AbstractDecoratorWriter extends \PhpOffice\PhpPresentation\Writer\AbstractDecoratorWriter
 {
@@ -12,7 +12,7 @@ abstract class AbstractDecoratorWriter extends \PhpOffice\PhpPresentation\Writer
     protected $arrayChart;
 
     /**
-     * @return \PhpOffice\PhpPresentation\Shape\Chart[]
+     * @return \PhpOffice\PhpPresentation\SlideShape\Chart[]
      */
     public function getArrayChart()
     {
@@ -20,7 +20,7 @@ abstract class AbstractDecoratorWriter extends \PhpOffice\PhpPresentation\Writer
     }
 
     /**
-     * @param \PhpOffice\PhpPresentation\Shape\Chart[] $arrayChart
+     * @param \PhpOffice\PhpPresentation\SlideShape\Chart[] $arrayChart
      * @return AbstractDecoratorWriter
      */
     public function setArrayChart($arrayChart)
