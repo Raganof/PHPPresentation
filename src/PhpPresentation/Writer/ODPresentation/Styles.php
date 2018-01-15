@@ -5,11 +5,11 @@ namespace PhpOffice\PhpPresentation\Writer\ODPresentation;
 use PhpOffice\Common\Drawing as CommonDrawing;
 use PhpOffice\Common\Text;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Shape\Group;
-use PhpOffice\PhpPresentation\Shape\Table;
+use PhpOffice\PhpPresentation\SlideShape\Group;
+use PhpOffice\PhpPresentation\SlideShape\Table;
 use PhpOffice\PhpPresentation\Slide\Background\Image;
 use PhpOffice\PhpPresentation\Style\Fill;
-use PhpOffice\PhpPresentation\Shape\RichText;
+use PhpOffice\PhpPresentation\SlideShape\RichText;
 use PhpOffice\PhpPresentation\Style\Border;
 
 class Styles extends AbstractDecoratorWriter

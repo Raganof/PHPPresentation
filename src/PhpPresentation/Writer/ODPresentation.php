@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * This file is part of PHPPresentation - A pure PHP library for reading and writing
@@ -20,8 +22,8 @@ namespace PhpOffice\PhpPresentation\Writer;
 use PhpOffice\Common\Adapter\Zip\ZipArchiveAdapter;
 use PhpOffice\PhpPresentation\HashTable;
 use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\AbstractDrawing;
-use PhpOffice\PhpPresentation\Shape\Table;
+use PhpOffice\PhpPresentation\SlideShape\AbstractDrawing;
+use PhpOffice\PhpPresentation\SlideShape\Table;
 use DirectoryIterator;
 
 /**
@@ -30,7 +32,7 @@ use DirectoryIterator;
 class ODPresentation extends AbstractWriter implements WriterInterface
 {
     /**
-     * @var \PhpOffice\PhpPresentation\Shape\Chart[]
+     * @var \PhpOffice\PhpPresentation\SlideShape\Chart[]
      */
     public $chartArray = array();
 

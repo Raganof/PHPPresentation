@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * This file is part of PHPPresentation - A pure PHP library for reading and writing
@@ -20,13 +22,13 @@ use PhpOffice\PhpPresentation\AbstractShape;
 use PhpOffice\PhpPresentation\ComparableInterface;
 use PhpOffice\PhpPresentation\GeometryCalculator;
 use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\Chart;
-use PhpOffice\PhpPresentation\Shape\Drawing\File;
-use PhpOffice\PhpPresentation\Shape\Group;
-use PhpOffice\PhpPresentation\Shape\Line;
-use PhpOffice\PhpPresentation\Shape\RichText;
-use PhpOffice\PhpPresentation\Shape\Table;
-use PhpOffice\PhpPresentation\ShapeContainerInterface;
+use PhpOffice\PhpPresentation\SlideShape\Chart;
+use PhpOffice\PhpPresentation\SlideShape\Drawing\File;
+use PhpOffice\PhpPresentation\SlideShape\Group;
+use PhpOffice\PhpPresentation\SlideShape\Line;
+use PhpOffice\PhpPresentation\SlideShape\RichText;
+use PhpOffice\PhpPresentation\SlideShape\Table;
+use PhpOffice\PhpPresentation\SlideShapeContainerInterface;
 use PhpOffice\PhpPresentation\Slide;
 
 abstract class AbstractSlide implements ComparableInterface, ShapeContainerInterface
@@ -228,7 +230,7 @@ abstract class AbstractSlide implements ComparableInterface, ShapeContainerInter
     /**
      * Create rich text shape
      *
-     * @return \PhpOffice\PhpPresentation\Shape\RichText
+     * @return \PhpOffice\PhpPresentation\SlideShape\RichText
      */
     public function createRichTextShape()
     {
@@ -244,7 +246,7 @@ abstract class AbstractSlide implements ComparableInterface, ShapeContainerInter
      * @param  int $fromY Starting point y offset
      * @param  int $toX Ending point x offset
      * @param  int $toY Ending point y offset
-     * @return \PhpOffice\PhpPresentation\Shape\Line
+     * @return \PhpOffice\PhpPresentation\SlideShape\Line
      */
     public function createLineShape($fromX, $fromY, $toX, $toY)
     {
@@ -256,7 +258,7 @@ abstract class AbstractSlide implements ComparableInterface, ShapeContainerInter
     /**
      * Create chart shape
      *
-     * @return \PhpOffice\PhpPresentation\Shape\Chart
+     * @return \PhpOffice\PhpPresentation\SlideShape\Chart
      */
     public function createChartShape()
     {
@@ -268,7 +270,7 @@ abstract class AbstractSlide implements ComparableInterface, ShapeContainerInter
     /**
      * Create drawing shape
      *
-     * @return \PhpOffice\PhpPresentation\Shape\Drawing\File
+     * @return \PhpOffice\PhpPresentation\SlideShape\Drawing\File
      */
     public function createDrawingShape()
     {
@@ -281,7 +283,7 @@ abstract class AbstractSlide implements ComparableInterface, ShapeContainerInter
      * Create table shape
      *
      * @param  int $columns Number of columns
-     * @return \PhpOffice\PhpPresentation\Shape\Table
+     * @return \PhpOffice\PhpPresentation\SlideShape\Table
      */
     public function createTableShape($columns = 1)
     {
@@ -293,7 +295,7 @@ abstract class AbstractSlide implements ComparableInterface, ShapeContainerInter
     /**
      * Creates a group within this slide
      *
-     * @return \PhpOffice\PhpPresentation\Shape\Group
+     * @return \PhpOffice\PhpPresentation\SlideShape\Group
      */
     public function createGroup()
     {

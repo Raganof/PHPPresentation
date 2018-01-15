@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * This file is part of PHPPresentation - A pure PHP library for reading and writing
@@ -17,7 +19,7 @@
 
 namespace PhpOffice\PhpPresentation\Style;
 
-use PhpOffice\PhpPresentation\Shape\RichText\Paragraph as RichTextParagraph;
+use PhpOffice\PhpPresentation\SlideShape\RichText\Paragraph as RichTextParagraph;
 
 /**
  * Class TextStyle

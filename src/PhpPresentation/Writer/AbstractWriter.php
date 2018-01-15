@@ -1,12 +1,14 @@
+
+
 <?php
 
 namespace PhpOffice\PhpPresentation\Writer;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\PhpPresentation\PhpPresentation;
-use PhpOffice\PhpPresentation\Shape\Chart;
-use PhpOffice\PhpPresentation\Shape\Drawing\AbstractDrawingAdapter;
-use PhpOffice\PhpPresentation\Shape\Group;
+use PhpOffice\PhpPresentation\SlideShape\Chart;
+use PhpOffice\PhpPresentation\SlideShape\Drawing\AbstractDrawingAdapter;
+use PhpOffice\PhpPresentation\SlideShape\Group;
 
 abstract class AbstractWriter
 {
@@ -88,7 +90,7 @@ abstract class AbstractWriter
     /**
      * Get an array of all drawings
      *
-     * @return \PhpOffice\PhpPresentation\Shape\AbstractDrawing[] All drawings in PhpPresentation
+     * @return \PhpOffice\PhpPresentation\SlideShape\AbstractDrawing[] All drawings in PhpPresentation
      * @throws \Exception
      */
     protected function allDrawings()

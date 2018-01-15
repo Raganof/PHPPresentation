@@ -2,8 +2,8 @@
 
 namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
 
-use PhpOffice\PhpPresentation\Shape\Comment;
-use PhpOffice\PhpPresentation\Shape\Comment\Author;
+use PhpOffice\PhpPresentation\SlideShape\Comment;
+use PhpOffice\PhpPresentation\SlideShape\Comment\Author;
 use PhpOffice\Common\XMLWriter;
 
 class Relationships extends AbstractDecoratorWriter

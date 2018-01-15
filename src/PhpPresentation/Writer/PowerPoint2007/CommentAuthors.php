@@ -4,8 +4,8 @@ namespace PhpOffice\PhpPresentation\Writer\PowerPoint2007;
 
 use PhpOffice\Common\Adapter\Zip\ZipInterface;
 use PhpOffice\Common\XMLWriter;
-use PhpOffice\PhpPresentation\Shape\Comment;
-use PhpOffice\PhpPresentation\Shape\Comment\Author;
+use PhpOffice\PhpPresentation\SlideShape\Comment;
+use PhpOffice\PhpPresentation\SlideShape\Comment\Author;
 
 class CommentAuthors extends AbstractDecoratorWriter
 {
